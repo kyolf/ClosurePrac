@@ -13,6 +13,13 @@ function addSix() {
   };
 }
 
+//Closures with proper naming
+function createBase(baseNum) {
+  return function (num) {
+    return baseNum + num;
+  };
+}
+
 var firstNum = addNum(2);
 var secondNum = firstNum(3);
 
@@ -24,3 +31,7 @@ var num = six(10);
 
 //Result: 16
 console.log(num);
+
+//Result: 15
+var addTen = createBase(10);
+console.log(addTen(5));
