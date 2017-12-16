@@ -16,6 +16,7 @@ for(var j = 0; j < 3; j++) {
 }
 
 //Solution #2
+//let is by block scoping instead of the function scoping
 for(let k = 0; k < 3; k++) {
   setTimeout(function() {
     console.log(k, 'hi');
