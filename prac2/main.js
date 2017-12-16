@@ -14,3 +14,10 @@ for(var j = 0; j < 3; j++) {
     console.log(index);
   })(j), 2000);
 }
+
+//Solution #2
+for(let k = 0; k < 3; k++) {
+  setTimeout(function() {
+    console.log(k, 'hi');
+  }, 1000 + k);
+}
