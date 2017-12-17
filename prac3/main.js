@@ -4,7 +4,7 @@ var counterEle = document.getElementById('js-counter');
 
 function initCounter() {
   var counter = 0;
-  function incCounter(){
+  return function incCounter(){
     return counter++;
   }
 }
