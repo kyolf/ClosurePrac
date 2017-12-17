@@ -4,11 +4,15 @@ var counterEle = document.getElementById('js-counter');
 
 function initCounter() {
   var counter = 0;
+  counterEle.innerHTML = counter;
   return function incCounter(){
-    return counter++;
-  }
+    counterEle.innerHTML = counter + 1;
+    console.log(counter);
+    return ++counter;
+  };
 }
 
 var counter1 = initCounter();
 
-counterEle.innerText = counter1();
+console.log(counter1);
+//counterEle.innerHTML = counter1();
