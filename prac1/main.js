@@ -20,6 +20,12 @@ function createBase(baseNum) {
   };
 }
 
+function sayFirstWord(firstWord) {
+  return function (secondWord) {
+    return firstWord + secondWord;
+  };
+}
+
 var firstNum = addNum(2);
 var secondNum = firstNum(3);
 
@@ -35,3 +41,7 @@ console.log(num);
 //Result: 15
 var addTen = createBase(10);
 console.log(addTen(5));
+
+var sayHello = sayFirstWord('hello');
+//Result: hello word
+console.log(sayHello('world'));
